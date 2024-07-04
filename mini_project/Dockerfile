@@ -22,4 +22,7 @@ COPY --from=build /app/client/build ./client/build
 
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+RUN npm install express
+RUN npm install aws-sdk
+
+# CMD ["node", "server.js"]
